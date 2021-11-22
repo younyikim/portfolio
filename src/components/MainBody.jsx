@@ -1,10 +1,20 @@
+import { gsap } from 'gsap';
+import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
 const MainBody = () => {
+  const boxRef = useRef();
+
+  useEffect(() => {
+    gsap.to(boxRef.value, 2, {
+      rotation: '+=360',
+    });
+  });
+
   return (
     <StyledWrapper>
       <div></div>
-      <StyledDesc>
+      <StyledDesc ref={boxRef}>
         <span>Front-end</span>
         <span>Developer</span>
         <span>Younyi Kim | 김연이</span>

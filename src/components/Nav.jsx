@@ -1,30 +1,50 @@
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
 const Nav = () => {
+  const containerRef = useRef(null);
+  const boxRef = useRef(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(boxRef.current, {
+      x: -10,
+      ease: 'ease',
+      duration: 4,
+      scrollTrigger: {
+        trigger: boxRef.current,
+        markers: true,
+        scrub: true,
+      },
+    });
+  }, []);
+
   return (
-    <StyledWrapper>
+    <StyledWrapper ref={containerRef}>
       <ul>
         <li>
           <div>
-            <StyledSelect />
+            <StyledSelect ref={boxRef} />
             Home
           </div>
         </li>
         <li>
           <div>
-            <StyledSelect />
+            {/* <StyledSelect ref={boxRef2} /> */}
             About
           </div>
         </li>
         <li>
           <div>
-            <StyledSelect />
+            {/* <StyledSelect /> */}
             Projects
           </div>
         </li>
         <li>
           <div>
-            <StyledSelect />
+            {/* <StyledSelect /> */}
             Contact
           </div>
         </li>
@@ -65,7 +85,7 @@ const StyledSelect = styled.div`
   position: absolute;
   top: 1.2rem;
   height: 1.4rem;
-  width: 100%;
+  width: 70px;
   background-color: #e6e5e8;
   z-index: -1;
 `;

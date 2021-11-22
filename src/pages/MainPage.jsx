@@ -8,6 +8,7 @@ const MainPage = () => {
     <StyledWrapper>
       <Header />
       <MainBody />
+      <MainBody />
       <Nav />
     </StyledWrapper>
   );

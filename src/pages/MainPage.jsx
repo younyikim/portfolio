@@ -1,4 +1,3 @@
-import Header from 'commons/Header';
 import MainBody from 'components/MainBody';
 import Nav from 'components/Nav';
 import styled from 'styled-components';
@@ -6,9 +5,6 @@ import styled from 'styled-components';
 const MainPage = () => {
   return (
     <StyledWrapper>
-      <MainBody />
-      <MainBody />
-      <MainBody />
       <MainBody />
       <Nav />
     </StyledWrapper>

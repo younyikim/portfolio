@@ -2,6 +2,9 @@ import { gsap } from 'gsap';
 import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import mainImg from 'assets/main_remove.png';
+import { VscGithubAlt } from 'react-icons/vsc';
+import { GoMail } from 'react-icons/go';
+import { IoIosArrowDown } from 'react-icons/io';
 
 const MainBody = () => {
   const textRef = useRef();
@@ -12,10 +15,10 @@ const MainBody = () => {
 
   useEffect(() => {
     let tl = gsap.timeline();
-    tl.to(bgRef.current, 0.3, { scaleX: 1 })
-      .to(bgRef2.current, 0.3, { scaleX: 1 })
+    tl.to(bgRef.current, 0.2, { scaleX: 1 })
+      .to(bgRef2.current, 0.2, { scaleX: 1 })
       .to(textRef.current, 0.1, { opacity: 1 }, '-=0.1')
-      .to(textRef2.current, 0.2, { opacity: 1 }, '-=0.1')
+      .to(textRef2.current, 0.1, { opacity: 1 }, '-=0.1')
       .to(bgRef.current, 0.2, { scaleX: 0 })
       .to(bgRef2.current, 0.2, { scaleX: 0 })
       .to(nameRef.current, 0.4, { opacity: 1 }, '-=0.1');
@@ -23,6 +26,11 @@ const MainBody = () => {
 
   return (
     <StyledWrapper>
+      <StyledRightNav>
+        <VscGithubAlt size="24" />
+        <GoMail size="24" />
+      </StyledRightNav>
+
       <StyledImgContainer>
         <img src={mainImg} alt="" />
       </StyledImgContainer>
@@ -35,9 +43,8 @@ const MainBody = () => {
           <span ref={textRef2}>Developer</span>
           <span ref={bgRef2}></span>
         </div>
-        <div>
-          <span ref={nameRef}>Younyi Kim | 김연이</span>
-        </div>
+        <span ref={nameRef}>Younyi Kim | 김연이</span>
+        <IoIosArrowDown />
       </StyledDesc>
     </StyledWrapper>
   );
@@ -52,6 +59,10 @@ const StyledWrapper = styled.section`
   justify-content: center;
   width: 100%;
   height: 100%;
+
+  & > svg {
+    color: white;
+  }
 `;
 
 const StyledDesc = styled.div`
@@ -60,7 +71,7 @@ const StyledDesc = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-  top: -15rem;
+  top: -11rem;
   left: -15rem;
   font-family: 'TmonMonsori';
   font-size: 8rem;
@@ -107,14 +118,17 @@ const StyledDesc = styled.div`
       background-color: #090910;
     }
   }
-  & > div:last-child {
+
+  & > span {
     margin-top: 4rem;
     font-size: 2.8rem;
+    opacity: 0;
+    text-align: right;
+  }
 
-    & > span {
-      opacity: 0;
-      text-align: right;
-    }
+  & > svg {
+    fill: #f8df8b;
+    opacity: 0.5;
   }
 `;
 
@@ -123,6 +137,7 @@ const StyledImgContainer = styled.div`
   width: 50%;
   height: 100%;
   background-color: #f8df8b;
+  overflow: hidden;
 
   & > img {
     position: absolute;
@@ -130,5 +145,24 @@ const StyledImgContainer = styled.div`
     left: -100px;
     width: 130%;
     z-index: 1;
+  }
+`;
+
+const StyledRightNav = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 5rem;
+
+  & > svg {
+    color: white;
+  }
+
+  & > svg + svg {
+    margin-top: 3rem;
+  }
+
+  & > svg:hover {
+    fill: #f8df8b;
   }
 `;

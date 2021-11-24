@@ -6,7 +6,8 @@ import styled from 'styled-components';
 const MainPage = () => {
   return (
     <StyledWrapper>
-      <Header />
+      <MainBody />
+      <MainBody />
       <MainBody />
       <MainBody />
       <Nav />
@@ -19,4 +20,5 @@ export default MainPage;
 const StyledWrapper = styled.div`
   width: 100%;
   height: 100%;
+  background-color: #090910;
 `;

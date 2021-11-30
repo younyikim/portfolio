@@ -7,17 +7,36 @@ import { ReactComponent as CssLogo } from 'assets/css.svg';
 import { ReactComponent as GitLogo } from 'assets/git.svg';
 import { ReactComponent as JSLogo } from 'assets/js.svg';
 import { ReactComponent as JavaLogo } from 'assets/java.svg';
+import Progress from './Progress';
 
 const MainBody = () => {
   return (
     <StyledWrapper>
       <StyledLeft>
-        <ReactLogo />
-        <HtmlLogo />
-        <CssLogo />
-        <JSLogo />
-        <GitLogo />
-        <JavaLogo />
+        <div>
+          <ReactLogo />
+          <Progress percent="70" />
+        </div>
+        <div>
+          <HtmlLogo />
+          <Progress percent="80" />
+        </div>
+        <div>
+          <CssLogo />
+          <Progress percent="80" />
+        </div>
+        <div>
+          <JSLogo />
+          <Progress percent="80" />
+        </div>
+        <div>
+          <GitLogo />
+          <Progress percent="60" />
+        </div>
+        <div>
+          <JavaLogo />
+          <Progress percent="60" />
+        </div>
       </StyledLeft>
       <StyledRight>
         <StyledContent>
@@ -48,7 +67,6 @@ const MainBody = () => {
 export default MainBody;
 
 const StyledWrapper = styled.section`
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,14 +76,23 @@ const StyledWrapper = styled.section`
 `;
 
 const StyledLeft = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
   height: 100%;
   color: white;
-  border: 1px solid red;
 
-  & > svg {
-    width: 10rem;
-    height: 10rem;
+  & > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & > svg {
+      width: 9rem;
+      height: 9rem;
+      margin-right: 2rem;
+    }
   }
 `;
 
@@ -75,14 +102,12 @@ const StyledRight = styled.div`
   justify-content: center;
   width: 100%;
   height: 100%;
-  /* border: 1px solid red; */
 `;
 
 const StyledContent = styled.article`
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* border: 1px solid blueviolet; */
   font-size: 1.8rem;
   color: white;
   line-height: 2;

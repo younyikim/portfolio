@@ -13,6 +13,7 @@ const Progress = ({ percent }) => {
       <StyledProgress percent={percent} moveProgress={moveProgress}>
         <StyledLiquid />
       </StyledProgress>
+      <span>{percent}%</span>
     </StyledProgressWrapper>
   );
 };
@@ -26,6 +27,15 @@ const StyledProgressWrapper = styled.div`
   border-radius: 1rem;
   position: relative;
   overflow: hidden;
+
+  & > span {
+    font-size: 2rem;
+    font-weight: bolder;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: white;
+  }
 `;
 
 const StyledProgress = styled.div`

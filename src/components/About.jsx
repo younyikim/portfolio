@@ -12,32 +12,35 @@ import Progress from './Progress';
 const MainBody = () => {
   return (
     <StyledWrapper>
-      <StyledLeft>
-        <div>
-          <ReactLogo />
-          <Progress percent="70" />
-        </div>
-        <div>
-          <HtmlLogo />
-          <Progress percent="80" />
-        </div>
-        <div>
-          <CssLogo />
-          <Progress percent="80" />
-        </div>
-        <div>
-          <JSLogo />
-          <Progress percent="80" />
-        </div>
-        <div>
-          <GitLogo />
-          <Progress percent="60" />
-        </div>
-        <div>
-          <JavaLogo />
-          <Progress percent="60" />
-        </div>
-      </StyledLeft>
+      <Fade left>
+        <StyledLeft>
+          <div>
+            <ReactLogo />
+            <Progress percent="70" />
+          </div>
+          <div>
+            <HtmlLogo />
+            <Progress percent="80" />
+          </div>
+          <div>
+            <CssLogo />
+            <Progress percent="80" />
+          </div>
+          <div>
+            <JSLogo />
+            <Progress percent="80" />
+          </div>
+          <div>
+            <GitLogo />
+            <Progress percent="60" />
+          </div>
+          <div>
+            <JavaLogo />
+            <Progress percent="60" />
+          </div>
+        </StyledLeft>
+      </Fade>
+
       <StyledRight>
         <StyledContent>
           <Fade bottom>
@@ -52,9 +55,15 @@ const MainBody = () => {
               <p>
                 반갑습니다! 저는 웹 프론트엔드 개발자, 김연이입니다.
                 <br />
-                아무것도 없는 흰 화면에서, 퍼즐을 맞추듯 한 조각씩 나의 코드 더해가는 재미에 매료되어 개발자의 꿈을
-                가지게 되었습니다. 아직 배울 것이 많은 개발자이지만, 주어지는 과제, 프로젝트 하나 하나 모두 성장을 위한
-                기회로 삼고 항상 최선을 다해 노력하고 몰입하는 개발자입니다.
+                <br />
+                웹잼에 참여하기 위해 SOPT에 들어왔고, 만나는 다른 파트원들 모두에게 웹을 영업할 정도로{' '}
+                <em>웹에 진심</em>인 프론트엔드 개발자입니다. 아직 배울 것이 많은 개발자이지만, 주어지는 과제, 프로젝트
+                하나 하나 모두 성장을 위한 기회로 삼고 항상 <em>최선을 다해 노력하고 몰입하는 개발자</em>입니다.
+                <br />
+                <br />
+                주로 <em>React</em>를 사용하여 개발하고, <em>HTML</em>과 <em>CSS</em>도 원하는 기능을 구현할 수 있는
+                정도의 실력을 가지고 있습니다. 합동 세미나, 솝커톤 등에 참여하며 개발자 간 협업 뿐 아니라, 다른 파트
+                분들과도 협업을 경험해보며, <em>원활한 협업</em>을 할 준비도 되어있습니다.
               </p>
             </div>
           </Fade>
@@ -81,6 +90,8 @@ const StyledLeft = styled.div`
   justify-content: center;
   width: 100%;
   height: 100%;
+  margin-top: 9rem;
+  margin-left: 5rem;
   color: white;
 
   & > div {
@@ -114,6 +125,7 @@ const StyledContent = styled.article`
 
   & > h2 {
     font-size: 2.4rem;
+    font-weight: bolder;
   }
 
   & > h3 {
@@ -122,6 +134,7 @@ const StyledContent = styled.article`
       color: #f8df8b;
     }
   }
+
   & > img {
     width: 6rem;
     height: 6rem;
@@ -129,6 +142,12 @@ const StyledContent = styled.article`
 
   & > div {
     font-size: 1.5rem;
-    width: 32rem;
+    width: 35rem;
+
+    & > p {
+      & > em {
+        color: #f8df8b;
+      }
+    }
   }
 `;

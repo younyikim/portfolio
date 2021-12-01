@@ -142,9 +142,9 @@ const StyledImgContainer = styled.div`
   & > img {
     position: absolute;
     top: 40%;
-    left: -100px;
+    left: -10rem;
     width: 130%;
-    z-index: 1;
+    z-index: 2;
   }
 `;
 

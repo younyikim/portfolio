@@ -5,8 +5,10 @@ import mainImg from 'assets/main_remove.png';
 import { VscGithubAlt } from 'react-icons/vsc';
 import { GoMail } from 'react-icons/go';
 import { IoIosArrowDown } from 'react-icons/io';
+import Nav from './Nav';
 
 const MainBody = () => {
+  const mainRef = useRef();
   const textRef = useRef();
   const bgRef = useRef();
   const textRef2 = useRef();
@@ -25,7 +27,7 @@ const MainBody = () => {
   }, []);
 
   return (
-    <StyledWrapper>
+    <StyledWrapper ref={mainRef}>
       <StyledRightNav>
         <VscGithubAlt size="24" />
         <GoMail size="24" />
@@ -46,6 +48,7 @@ const MainBody = () => {
         <span ref={nameRef}>Younyi Kim | 김연이</span>
         <IoIosArrowDown />
       </StyledDesc>
+      <Nav location={mainRef.current} />
     </StyledWrapper>
   );
 };
@@ -58,7 +61,7 @@ const StyledWrapper = styled.section`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 
   & > svg {
     color: white;

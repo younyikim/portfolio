@@ -26,6 +26,6 @@ module.exports = {
     'react/display-name': 'off',
     'prettier/prettier': ['error', { endOfLine: 'auto', singleQuote: true }, { usePrettierrc: true }],
     'no-unused-vars': 'warn',
-    'no-console': 'warn',
+    'no-console': 'off',
   },
 };

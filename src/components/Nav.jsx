@@ -1,35 +1,28 @@
-import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
-const Nav = () => {
-  useEffect(() => {}, []);
-
+const Nav = ({ scrollIndex }) => {
   return (
     <StyledWrapper>
       <ul>
         <li>
-          <div>
-            <StyledSelect />
+          <Dot num={1} scrollIndex={scrollIndex}>
             Home
-          </div>
+          </Dot>
         </li>
         <li>
-          <div>
-            {/* <StyledSelect /> */}
+          <Dot num={2} scrollIndex={scrollIndex}>
             About
-          </div>
+          </Dot>
         </li>
         <li>
-          <div>
-            {/* <StyledSelect /> */}
+          <Dot num={3} scrollIndex={scrollIndex}>
             Projects
-          </div>
+          </Dot>
         </li>
         <li>
-          <div>
-            {/* <StyledSelect /> */}
+          <Dot num={4} scrollIndex={scrollIndex}>
             Contact
-          </div>
+          </Dot>
         </li>
       </ul>
     </StyledWrapper>
@@ -66,12 +59,10 @@ const StyledWrapper = styled.nav`
   }
 `;
 
-const StyledSelect = styled.div`
-  position: absolute;
-  top: 1.1rem;
-  left: -0.5rem;
-  height: 1.4rem;
-  width: 70px;
-  background-color: #f8df8b;
-  z-index: -1;
+const Dot = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  color: ${(props) => (props.scrollIndex === props.num ? '#f8df8b' : 'white')};
 `;

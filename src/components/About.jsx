@@ -8,10 +8,13 @@ import { ReactComponent as GitLogo } from 'assets/git.svg';
 import { ReactComponent as JSLogo } from 'assets/js.svg';
 import { ReactComponent as JavaLogo } from 'assets/java.svg';
 import Progress from './Progress';
+import { useRef } from 'react';
 
 const MainBody = () => {
+  const aboutRef = useRef();
+
   return (
-    <StyledWrapper>
+    <StyledWrapper ref={aboutRef}>
       <Fade left>
         <StyledLeft>
           <div>
@@ -80,7 +83,7 @@ const StyledWrapper = styled.section`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: #090910;
 `;
 

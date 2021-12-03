@@ -64,5 +64,15 @@ const Dot = styled.div`
   width: 100%;
   height: 100%;
 
-  color: ${(props) => (props.scrollIndex === props.num ? '#f8df8b' : 'white')};
+  /* color: ${(props) => (props.scrollIndex === props.num ? '#f8df8b' : 'white')}; */
+  color: ${(props) => {
+    if (props.scrollIndex === props.num) {
+      if (props.num === 3) {
+        return 'black';
+      }
+      return '#f8df8b';
+    } else {
+      return 'white';
+    }
+  }};
 `;

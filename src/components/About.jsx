@@ -84,7 +84,6 @@ const StyledWrapper = styled.section`
   justify-content: center;
   width: 100%;
   height: 100vh;
-  background-color: #090910;
 `;
 
 const StyledLeft = styled.div`

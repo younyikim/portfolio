@@ -3,6 +3,7 @@ import About from 'components/About';
 import Nav from 'components/Nav';
 import styled from 'styled-components';
 import { useEffect, useRef, useState } from 'react';
+import Projects from 'components/Projects';
 
 const MainPage = () => {
   const outerRef = useRef();
@@ -98,7 +99,7 @@ const MainPage = () => {
     <StyledWrapper ref={outerRef}>
       <MainBody />
       <About />
-      <MainBody />
+      <Projects />
       <About />
       <Nav scrollIndex={scrollIndex} />
     </StyledWrapper>

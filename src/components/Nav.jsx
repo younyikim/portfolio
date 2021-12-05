@@ -68,7 +68,7 @@ const Dot = styled.div`
   color: ${(props) => {
     if (props.scrollIndex === props.num) {
       if (props.num === 3) {
-        return 'black';
+        return '#f8df8b';
       }
       return '#f8df8b';
     } else {

@@ -23,7 +23,7 @@ export default Progress;
 const StyledProgressWrapper = styled.div`
   width: 50rem;
   height: 4rem;
-  border: 1px solid white;
+
   border-radius: 1rem;
   position: relative;
   overflow: hidden;

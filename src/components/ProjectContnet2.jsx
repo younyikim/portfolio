@@ -1,42 +1,40 @@
 import styled from 'styled-components';
-import Coeat from 'assets/coeat.jpeg';
+import Coeat from 'assets/brunch.png';
 import { BsDot, BsLink } from 'react-icons/bs';
-const ProjectContent = () => {
+
+const ProjectContent2 = () => {
   return (
     <StyledContentWrapper>
       <StyledDesc>
         <h2>
-          C<em>O</em>EAT : 모두가 행복한, 메뉴 취합 서비스
+          글이 작품이 되는 공간, <em>Brunch</em> <br />: Re-Design
         </h2>
         <ul>
           <li>
-            <p>
-              오늘 뭐 먹을래? 아무거나는 이제 그만! 팀원들의 선택을 바탕으로 오늘 코잇할 메뉴가 정해지면 못 먹는 메뉴는
-              제외하고, 함께 먹고 싶은 메뉴를 최종 결정해주는 서비스
-            </p>
+            <p>SOPT 29th 클라이언트, 디자인, 서버 합동 세미나에서 진행한 프로젝트입니다.</p>
           </li>
           <li>
-            <h3>2021년 11월</h3>
+            <h3>2021년 11월 ~ 12월</h3>
           </li>
-          <li>
-            <p>
-              <BsDot />
-              솝커톤 COEAT 팀 프론트엔드 개발자로 참여 및 Refactoring 진행중
-            </p>
-          </li>
-
           <li>
             <p>
               {' '}
               <BsDot />
-              Landig Page Input | Pick Page Footer | Modal Result Page 개발
+              Article 페이지를 담당하여 개발
+            </p>
+          </li>
+          <li>
+            <p>
+              {' '}
+              <BsDot />
+              Article Page UI | Article, Comment, Likes GET, POST
             </p>
           </li>
           <li>
             <BsLink /> <span>Github Repository</span>
           </li>
           <li>
-            <BsLink /> <span>솝커톤 회고 기록</span>
+            <BsLink /> <span>Brunch Demo</span>
           </li>
         </ul>
       </StyledDesc>
@@ -45,10 +43,10 @@ const ProjectContent = () => {
         <StyledTags>
           <ul>
             <li>SOPT</li>
-            <li>솝커톤</li>
+            <li>합동 세미나</li>
+            <li>Re-Design</li>
             <li>React</li>
-            <li>Styled-component</li>
-            <li>Github</li>
+            <li>REST API</li>
           </ul>
         </StyledTags>
       </StyledImgWrapper>
@@ -56,7 +54,7 @@ const ProjectContent = () => {
   );
 };
 
-export default ProjectContent;
+export default ProjectContent2;
 
 const StyledContentWrapper = styled.div`
   display: flex;
@@ -78,10 +76,6 @@ const StyledDesc = styled.div`
     font-family: 'TmonMonsori';
     font-size: 3.3rem;
     margin-bottom: 2rem;
-
-    & > em {
-      color: orange;
-    }
   }
 
   & > ul {
@@ -96,44 +90,49 @@ const StyledDesc = styled.div`
 
     & > li {
       & > svg {
-        fill: orange;
+        fill: #f8df8b;
         margin-left: 1rem;
         font-size: 2rem;
       }
       & > span {
         cursor: pointer;
         font-weight: bolder;
-        color: orange;
+        color: #f8df8b;
       }
 
       & > h3 {
         font-size: 1.8rem;
-        color: orange;
+        color: #f8df8b;
       }
     }
   }
 `;
 
 const StyledImgWrapper = styled.div`
-  margin-right: 2rem;
+  margin-right: 3rem;
+  width: 100%;
+
   & > img {
-    width: 100%;
+    width: 90%;
   }
 `;
 
 const StyledTags = styled.div`
   margin-top: 4rem;
+
   & > ul {
     display: flex;
+    flex-wrap: wrap;
 
     & > li {
-      color: white;
+      color: #4a2c2c;
       font-size: 1.5rem;
-      background-color: orange;
+      background-color: #f8df8b;
       padding: 0.3rem 1rem;
       border-radius: 0.5rem;
       text-align: center;
       line-height: 1.6;
+      margin-bottom: 1rem;
     }
     & > li + li {
       margin-left: 1rem;

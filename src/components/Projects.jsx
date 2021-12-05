@@ -4,6 +4,8 @@ import Slider from 'react-slick';
 import '../styles/slick-theme.css';
 import '../styles/slick.css';
 import ProjectContent from './ProjectContent';
+import ProjectContent2 from './ProjectContnet2';
+import ProjectContent3 from './ProjectContent3';
 
 const Projects = () => {
   const settings = {
@@ -19,21 +21,12 @@ const Projects = () => {
         <StyledContentFirst>
           <ProjectContent />
         </StyledContentFirst>
-        <div>
-          <h3>2</h3>
-        </div>
-        <div>
-          <h3>3</h3>
-        </div>
-        <div>
-          <h3>4</h3>
-        </div>
-        <div>
-          <h3>5</h3>
-        </div>
-        <div>
-          <h3>6</h3>
-        </div>
+        <StyledContentSecond>
+          <ProjectContent2 />
+        </StyledContentSecond>
+        <StyledContentLast>
+          <ProjectContent3 />
+        </StyledContentLast>
       </Slider>
     </StyledProjectWrapper>
   );
@@ -50,5 +43,19 @@ const StyledContentFirst = styled.div`
   width: 100%;
   height: 100vh;
   font-size: 3rem;
-  background-color: #f8df8b;
+  background-color: black;
+`;
+
+const StyledContentSecond = styled.div`
+  width: 100%;
+  height: 100vh;
+  font-size: 3rem;
+  background-color: #4a2c2c;
+`;
+
+const StyledContentLast = styled.div`
+  width: 100%;
+  height: 100vh;
+  font-size: 3rem;
+  background-color: #a9333a;
 `;

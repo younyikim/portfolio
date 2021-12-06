@@ -4,6 +4,7 @@ import Nav from 'components/Nav';
 import styled from 'styled-components';
 import { useEffect, useRef, useState } from 'react';
 import Projects from 'components/Projects';
+import Contact from 'components/Contact';
 
 const MainPage = () => {
   const outerRef = useRef();
@@ -100,7 +101,7 @@ const MainPage = () => {
       <MainBody />
       <About />
       <Projects />
-      <About />
+      <Contact />
       <Nav scrollIndex={scrollIndex} />
     </StyledWrapper>
   );
@@ -113,6 +114,7 @@ const StyledWrapper = styled.div`
   height: 100vh;
   background-color: #090910;
   overflow-y: scroll;
+  z-index: 2;
 
   &::-webkit-scrollbar {
     display: none;

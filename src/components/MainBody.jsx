@@ -1,7 +1,8 @@
 import { gsap } from 'gsap';
 import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import mainImg from 'assets/main_remove.png';
+// import mainImg from 'assets/main_remove.png';
+import mainImg from 'assets/profile.png';
 import { VscGithubAlt } from 'react-icons/vsc';
 import { GoMail } from 'react-icons/go';
 import { IoIosArrowDown } from 'react-icons/io';
@@ -144,9 +145,9 @@ const StyledImgContainer = styled.div`
 
   & > img {
     position: absolute;
-    top: 40%;
-    left: -10rem;
-    width: 130%;
+    top: 0;
+    left: -1rem;
+    width: 100%;
     z-index: 2;
   }
 `;

@@ -1,7 +1,6 @@
 import { gsap } from 'gsap';
 import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-// import mainImg from 'assets/main_remove.png';
 import mainImg from 'assets/profile.png';
 import { VscGithubAlt } from 'react-icons/vsc';
 import { GoMail } from 'react-icons/go';
@@ -30,8 +29,12 @@ const MainBody = () => {
   return (
     <StyledWrapper ref={mainRef}>
       <StyledRightNav>
-        <VscGithubAlt size="24" />
-        <GoMail size="24" />
+        <a href="https://github.com/younyikim" target="_blank" rel="noopener noreferrer">
+          <VscGithubAlt size="24" />
+        </a>
+        <a href="mailto:rlakuku1221@gmail.com" target="_blank" rel="noopener noreferrer">
+          <GoMail size="24" />
+        </a>
       </StyledRightNav>
 
       <StyledImgContainer>
@@ -158,15 +161,17 @@ const StyledRightNav = styled.div`
   position: absolute;
   left: 5rem;
 
-  & > svg {
+  & > a {
+    text-decoration: none;
+    margin-bottom: 1rem;
     color: white;
-  }
 
-  & > svg + svg {
-    margin-top: 3rem;
-  }
+    & > svg {
+      margin-top: 2rem;
+    }
 
-  & > svg:hover {
-    fill: #f8df8b;
+    & > svg:hover {
+      fill: #f8df8b;
+    }
   }
 `;

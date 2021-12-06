@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 import Slider from 'react-slick';
+import Fade from 'react-reveal/Fade';
 import '../styles/slick-theme.css';
 import '../styles/slick.css';
 import ProjectContent from './ProjectContent';
@@ -17,17 +18,20 @@ const Projects = () => {
   };
   return (
     <StyledProjectWrapper>
-      <Slider {...settings}>
-        <StyledContentFirst>
-          <ProjectContent />
-        </StyledContentFirst>
-        <StyledContentSecond>
-          <ProjectContent2 />
-        </StyledContentSecond>
-        <StyledContentLast>
-          <ProjectContent3 />
-        </StyledContentLast>
-      </Slider>
+      <Fade bottom>
+        <h1>Projects</h1>
+        <Slider {...settings}>
+          <StyledContentFirst>
+            <ProjectContent />
+          </StyledContentFirst>
+          <StyledContentSecond>
+            <ProjectContent2 />
+          </StyledContentSecond>
+          <StyledContentLast>
+            <ProjectContent3 />
+          </StyledContentLast>
+        </Slider>
+      </Fade>
     </StyledProjectWrapper>
   );
 };
@@ -38,6 +42,17 @@ const StyledProjectWrapper = styled.div`
   height: 100%;
   width: 100%;
   font-size: 3rem;
+  position: relative;
+
+  & > h1 {
+    font-family: 'TmonMonsori';
+    position: absolute;
+    top: 10rem;
+    left: 14rem;
+    color: white;
+    z-index: 10;
+    font-weight: bolder;
+  }
 `;
 const StyledContentFirst = styled.div`
   width: 100%;

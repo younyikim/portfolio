@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Anime from 'assets/anime.png';
-import Velog from 'assets/velog.jpeg';
-import { BsDot, BsLink } from 'react-icons/bs';
+import Brunch from 'assets/brunch.png';
+import { BsDot } from 'react-icons/bs';
 import { SiNotion } from 'react-icons/si';
 
 const ProjectContent3 = () => {
@@ -20,10 +20,11 @@ const ProjectContent3 = () => {
                 <BsDot />
                 React Study : 아이리스
               </p>
-              <div>
+
+              <StyledLink>
                 {' '}
-                <SiNotion /> Notion
-              </div>
+                <SiNotion /> <span>Notion</span>
+              </StyledLink>
             </div>
           </li>
           <li>
@@ -33,10 +34,11 @@ const ProjectContent3 = () => {
                 <BsDot />
                 Animation Study : 아니메
               </p>
-              <div>
+
+              <StyledLink>
                 {' '}
-                <SiNotion /> Notion
-              </div>
+                <SiNotion /> <span>Notion</span>
+              </StyledLink>
             </div>
           </li>
           <li>
@@ -49,10 +51,11 @@ const ProjectContent3 = () => {
                 <BsDot />
                 Javascript Algorithm Study
               </p>
-              <div>
+
+              <StyledLink>
                 {' '}
-                <SiNotion /> Notion
-              </div>
+                <SiNotion /> <span>Notion</span>
+              </StyledLink>
             </div>
           </li>
           <li>
@@ -63,80 +66,38 @@ const ProjectContent3 = () => {
       <StyledDescPost>
         <h2>My Posts</h2>
         <StyledCardWrapper>
-          <StyledCard>
-            <CardImgWrapper>
-              <img src={Velog} alt="" />
-            </CardImgWrapper>
-
-            <h3> React에서 SVG 파일이 덮어씌워지는 문제</h3>
-            <p>2021년 11월 19일</p>
-          </StyledCard>
-          <StyledCard>
-            <CardImgWrapper>
-              <img src={Velog} alt="" />
-            </CardImgWrapper>
-            <h3> React에서 SVG 파일이 덮어씌워지는 문제</h3>
-            <p>2021년 11월 19일</p>
-          </StyledCard>
-          {/* <StyledCard>
-            <CardImgWrapper>
-              <img src={Velog} alt="" />
-            </CardImgWrapper>
-            <h3> React에서 SVG 파일이 덮어씌워지는 문제</h3>
-            <p>2021년 11월 19일</p>
-          </StyledCard>
-          <StyledCard>
-            <CardImgWrapper>
-              <img src={Velog} alt="" />
-            </CardImgWrapper>
-            <h3> React에서 SVG 파일이 덮어씌워지는 문제</h3>
-            <p>2021년 11월 19일</p>
-          </StyledCard> */}
+          <a
+            href="https://velog.io/@younyikim/Error-React%EC%97%90%EC%84%9C-SVG-%ED%8C%8C%EC%9D%BC%EC%9D%B4-%EB%8D%AE%EC%96%B4%EC%94%8C%EC%9B%8C%EC%A7%80%EB%8A%94-%EB%AC%B8%EC%A0%9C"
+            rel="noopener noreferrer"
+            target="_blank">
+            <StyledCard>
+              <CardImgWrapper>
+                <img
+                  src="https://media.vlpt.us/images/younyikim/post/38656971-d303-4bbb-8457-892be82fa616/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-11-19%20%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB%2010.31.23.png?w=768"
+                  alt=""
+                />
+              </CardImgWrapper>
+              <div>
+                <h3> React에서 SVG 파일이 덮어씌워지는 문제</h3>
+                <p>2021년 11월 19일</p>
+              </div>
+            </StyledCard>
+          </a>
+          <a
+            href="https://time-knee-9fd.notion.site/Brunch-Re-design-45eef6160db44949aebcf4113b0fbdf9"
+            target="_blank"
+            rel="noopener noreferrer">
+            <StyledCard>
+              <CardImgWrapper>
+                <img src={Brunch} alt="" />
+              </CardImgWrapper>
+              <div>
+                <h3> 합동 세미나 - Brunch Re-design</h3>
+                <p>2021년 12월 3일</p>
+              </div>
+            </StyledCard>
+          </a>
         </StyledCardWrapper>
-
-        <ul>
-          <li>
-            {/* <a
-              href="https://velog.io/@younyikim/Error-React%EC%97%90%EC%84%9C-SVG-%ED%8C%8C%EC%9D%BC%EC%9D%B4-%EB%8D%AE%EC%96%B4%EC%94%8C%EC%9B%8C%EC%A7%80%EB%8A%94-%EB%AC%B8%EC%A0%9C"
-              target="_blank"
-              rel="noopener noreferrer">
-              React에서 SVG 파일이 덮어씌워지는 문제
-            </a> */}
-          </li>
-          <li>
-            {/* <a
-              href="https://velog.io/@younyikim/ErrorError-Result...-Nothing-was-returned-from-render.-This-usually-means-a-return-statement-is-missing.-Or-to-render-nothing-return-null"
-              target="_blank"
-              rel="noopener noreferrer">
-              [Error]Error: Result(...): Nothing was returned from render. This usually means a return statement is
-              missing. Or, to render nothing, return null.
-            </a> */}
-          </li>
-          {/* <li>
-            <a
-              href="https://time-knee-9fd.notion.site/Brunch-Re-design-45eef6160db44949aebcf4113b0fbdf9"
-              target="_blank"
-              rel="noopener noreferrer">
-              합동 세미나 - Brunch Re-design 회고록
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://time-knee-9fd.notion.site/COEAT-44d4a363242c4742809743dc03f17f91"
-              target="_blank"
-              rel="noopener noreferrer">
-              솝커톤 - COEAT 회고록
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://time-knee-9fd.notion.site/Project-HTML-CSS-JS-0c091530fd704ddb88e7194e616c6002"
-              target="_blank"
-              rel="noopener noreferrer">
-              Project - HTML/CSS/JS
-            </a>
-          </li> */}
-        </ul>
       </StyledDescPost>
     </StyledContentWrapper>
   );
@@ -153,7 +114,7 @@ const StyledContentWrapper = styled.div`
   height: 100%;
   color: white;
   position: relative;
-  padding-top: 15rem;
+  padding-top: 21rem;
 `;
 
 const StyledDesc = styled.div`
@@ -194,20 +155,36 @@ const StyledDesc = styled.div`
       & > div {
         display: flex;
         justify-content: space-between;
+
+        & > a {
+          text-decoration: none;
+        }
+
+        & > a:visited {
+          color: white;
+        }
+
+        & > a:link {
+          color: white;
+        }
       }
 
       & > img {
         width: 100%;
-      }
-
-      & > a:link {
-        color: white;
-      }
-
-      & > a:visited {
-        color: white;
+        height: 12.5rem;
       }
     }
+  }
+`;
+
+const StyledLink = styled.div`
+  display: flex;
+  border: 1px solid white;
+  padding: 0.3rem 1rem 0.1rem 1rem;
+
+  & > span {
+    margin-left: 0.6rem;
+    line-height: 1.3;
   }
 `;
 
@@ -228,7 +205,12 @@ const StyledDescPost = styled.div`
 const StyledCardWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
   width: 100%;
+
+  & > a {
+    text-decoration: none;
+  }
 `;
 
 const StyledCard = styled.div`
@@ -236,15 +218,37 @@ const StyledCard = styled.div`
   flex-direction: column;
   background-color: rgb(241, 243, 245);
   width: 100%;
-  height: 30rem;
-  border-bottom: 1px solid rgb(233, 236, 239);
-  border-radius: 1rem;
+  height: 34.5rem;
+  border-radius: 0.3rem;
+  -webkit-box-shadow: 5px 11px 15px -11px #000000;
+  box-shadow: 5px 11px 15px -11px #000000;
+  transition: box-shadow 0.25s ease-in 0s, transform 0.25s ease-in 0s;
   color: black;
+
+  &:hover {
+    transform: translateY(-8px);
+  }
+
+  & > div:last-child {
+    margin: 0 0.8rem 0.8rem 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    & > h3 {
+      font-weight: bolder;
+    }
+
+    & > p {
+      color: gray;
+    }
+  }
 `;
 
 const CardImgWrapper = styled.div`
   position: relative;
-  padding-top: 52.1921%;
+  padding-top: 62.1921%;
   margin-bottom: 16px;
 
   & > img {
@@ -254,6 +258,6 @@ const CardImgWrapper = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 1rem;
+    border-radius: 0.3rem;
   }
 `;

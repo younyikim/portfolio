@@ -31,10 +31,14 @@ const ProjectContent2 = () => {
             </p>
           </li>
           <li>
-            <BsLink /> <span>Github Repository</span>
+            <a href="https://github.com/we-sopt-sibi/client" target="_blank" rel="noopener noreferrer">
+              <BsLink /> <span>Github Repository</span>
+            </a>
           </li>
           <li>
-            <BsLink /> <span>Brunch Demo</span>
+            <a href="https://brunch-sibi.netlify.app/" target="_blank" rel="noopener noreferrer">
+              <BsLink /> <span>Brunch Demo</span>
+            </a>
           </li>
         </ul>
       </StyledDesc>
@@ -102,6 +106,11 @@ const StyledDesc = styled.div`
 
       & > h3 {
         font-size: 1.8rem;
+        color: #f8df8b;
+      }
+
+      & > a {
+        text-decoration: none;
         color: #f8df8b;
       }
     }

@@ -33,10 +33,17 @@ const ProjectContent = () => {
             </p>
           </li>
           <li>
-            <BsLink /> <span>Github Repository</span>
+            <a href="https://github.com/CO-EAT/CO-EAT-CLIENT" target="_blank" rel="noopener noreferrer">
+              <BsLink /> <span>Github Repository</span>
+            </a>
           </li>
           <li>
-            <BsLink /> <span>솝커톤 회고 기록</span>
+            <a
+              href="https://time-knee-9fd.notion.site/COEAT-44d4a363242c4742809743dc03f17f91"
+              target="_blank"
+              rel="noopener noreferrer">
+              <BsLink /> <span>솝커톤 회고 기록</span>
+            </a>
           </li>
         </ul>
       </StyledDesc>
@@ -108,6 +115,11 @@ const StyledDesc = styled.div`
 
       & > h3 {
         font-size: 1.8rem;
+        color: orange;
+      }
+
+      & > a {
+        text-decoration: none;
         color: orange;
       }
     }

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Coeat from 'assets/coeat.jpeg';
+import final from 'assets/final.gif';
 import { BsDot, BsLink } from 'react-icons/bs';
 const ProjectContent = () => {
   return (
@@ -48,14 +49,13 @@ const ProjectContent = () => {
         </ul>
       </StyledDesc>
       <StyledImgWrapper>
-        <img src={Coeat} alt="" />
+        <img src={final} alt="" />
         <StyledTags>
           <ul>
             <li>SOPT</li>
             <li>솝커톤</li>
             <li>React</li>
             <li>Styled-component</li>
-            <li>Github</li>
           </ul>
         </StyledTags>
       </StyledImgWrapper>
@@ -135,8 +135,10 @@ const StyledImgWrapper = styled.div`
 
 const StyledTags = styled.div`
   margin-top: 4rem;
+
   & > ul {
     display: flex;
+    flex-wrap: wrap;
 
     & > li {
       color: white;
@@ -146,6 +148,7 @@ const StyledTags = styled.div`
       border-radius: 0.5rem;
       text-align: center;
       line-height: 1.6;
+      margin-bottom: 1rem;
     }
     & > li + li {
       margin-left: 1rem;

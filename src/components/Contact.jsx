@@ -6,8 +6,22 @@ import { BsInstagram } from 'react-icons/bs';
 import { VscGithubAlt } from 'react-icons/vsc';
 
 const Contact = () => {
+  const paperArr = ['#63CEE5', '#799EFF', '#7CDDBA', '#9C5FFF', '#F36BFF', '#FF8484', '#FF9A84', '#FFAA5C', '#FFE486'];
+
+  const flakeElArr = [];
+  const randomPaperFlakes = () => {
+    for (let i = 0; i < 20; i++) {
+      const idx = Math.floor(Math.random() * 9);
+      const imgSrc = paperArr[idx];
+      flakeElArr.push(<Flake key={i} color={imgSrc} />);
+    }
+
+    return flakeElArr;
+  };
+
   return (
     <StyledContactWrapper>
+      <StyledDecoration>{randomPaperFlakes()}</StyledDecoration>
       <StyledLeft>
         <img src={Profile} alt="" />
       </StyledLeft>
@@ -121,5 +135,88 @@ const StyledContactInfo = styled.div`
 
   & > div + div {
     margin-top: 1rem;
+  }
+`;
+
+const StyledDecoration = styled.div`
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 80rem;
+  position: absolute;
+  top: 2rem;
+`;
+
+const Flake = styled.div`
+  width: 3rem;
+  height: 3rem;
+  background-color: ${(props) => props.color};
+
+  width: 6rem;
+  height: 6rem;
+  display: inline-block;
+  animation: paperflakes 2s linear 20;
+
+  &:nth-child(3n) {
+    animation-duration: 2s;
+    animation-iteration-count: 30;
+    transform-origin: right -45px;
+  }
+
+  &:nth-child(3n + 1) {
+    animation-duration: 4s;
+    animation-iteration-count: 45;
+    transform-origin: right -30px;
+  }
+
+  &:nth-child(3n + 2) {
+    animation-duration: 6s;
+    animation-iteration-count: 60;
+    transform-origin: right -15px;
+  }
+
+  /* 모두 같은 시간에 시작하지 않도록, 시간차이를 둔다. */
+  &:nth-child(7n) {
+    opacity: 0.3;
+    animation-delay: 0s;
+    animation-timing-function: ease-in;
+  }
+  &:nth-child(7n + 1) {
+    opacity: 0.4;
+    animation-delay: 0.1s;
+    animation-timing-function: ease-out;
+  }
+  &:nth-child(7n + 2) {
+    opacity: 0.5;
+    animation-delay: 0.2s;
+    animation-timing-function: linear;
+  }
+  &:nth-child(7n + 3) {
+    opacity: 0.6;
+    animation-delay: 0.3s;
+    animation-timing-function: ease-in;
+  }
+  &:nth-child(7n + 4) {
+    opacity: 0.7;
+    animation-delay: 0.4s;
+    animation-timing-function: linear;
+  }
+  &:nth-child(7n + 5) {
+    opacity: 0.8;
+    animation-delay: 0.5s;
+    animation-timing-function: ease-out;
+  }
+  &:nth-child(7n + 6) {
+    opacity: 0.9;
+    animation-delay: 1s;
+    animation-timing-function: ease-in;
+  }
+  @keyframes paperflakes {
+    0% {
+      transform: translate3d(0, 0, 0) rotate(0deg) scale(0.6);
+    }
+    100% {
+      transform: translate3d(15px, 1200px, 0px) rotate(180deg) scale(0.6);
+    }
   }
 `;

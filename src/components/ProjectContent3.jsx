@@ -16,13 +16,11 @@ const ProjectContent3 = () => {
           <li>
             <div>
               <p>
-                {' '}
                 <BsDot />
                 React Study : 아이리스
               </p>
 
               <StyledLink>
-                {' '}
                 <SiNotion /> <span>Notion</span>
               </StyledLink>
             </div>
@@ -30,13 +28,10 @@ const ProjectContent3 = () => {
           <li>
             <div>
               <p>
-                {' '}
                 <BsDot />
                 Animation Study : 아니메
               </p>
-
               <StyledLink>
-                {' '}
                 <SiNotion /> <span>Notion</span>
               </StyledLink>
             </div>
@@ -47,13 +42,11 @@ const ProjectContent3 = () => {
           <li>
             <div>
               <p>
-                {' '}
                 <BsDot />
                 Javascript Algorithm Study
               </p>
 
               <StyledLink>
-                {' '}
                 <SiNotion /> <span>Notion</span>
               </StyledLink>
             </div>

@@ -17,13 +17,13 @@ const MainBody = () => {
 
   useEffect(() => {
     let tl = gsap.timeline();
-    tl.to(bgRef.current, 0.2, { scaleX: 1 })
-      .to(bgRef2.current, 0.2, { scaleX: 1 })
-      .to(textRef.current, 0.1, { opacity: 1 }, '-=0.1')
-      .to(textRef2.current, 0.1, { opacity: 1 }, '-=0.1')
-      .to(bgRef.current, 0.2, { scaleX: 0 })
-      .to(bgRef2.current, 0.2, { scaleX: 0 })
-      .to(nameRef.current, 0.4, { opacity: 1 }, '-=0.1');
+    tl.to(bgRef.current, 0.3, { scaleX: 1 })
+      .to(bgRef2.current, 0.3, { scaleX: 1 })
+      .to(textRef.current, 0.2, { opacity: 1 }, '-=0.1')
+      .to(textRef2.current, 0.2, { opacity: 1 }, '-=0.1')
+      .to(bgRef.current, 0.3, { scaleX: 0 })
+      .to(bgRef2.current, 0.3, { scaleX: 0 })
+      .to(nameRef.current, 0.5, { opacity: 1 }, '-=0.1');
   }, []);
 
   return (

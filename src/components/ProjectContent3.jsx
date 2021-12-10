@@ -223,7 +223,7 @@ const StyledCard = styled.div`
   }
 
   & > div:last-child {
-    margin: 0 0.8rem 0.8rem 0.8rem;
+    margin: 0 1rem 1rem 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

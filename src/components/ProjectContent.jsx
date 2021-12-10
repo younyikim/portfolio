@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import Coeat from 'assets/coeat.jpeg';
 import final from 'assets/final.gif';
 import { BsDot, BsLink } from 'react-icons/bs';
+
 const ProjectContent = () => {
   return (
     <StyledContentWrapper>

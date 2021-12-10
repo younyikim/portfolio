@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 62.5%;
 
     scroll-behavior: smooth;
+  
   }
 
   * {
@@ -34,7 +35,7 @@ const GlobalStyle = createGlobalStyle`
 
   button:hover {
     cursor: pointer;
-  }
+  } 
 `;
 
 export default GlobalStyle;

@@ -22,7 +22,6 @@ const MainPage = () => {
         // 스크롤 내리는 경우
         if (scrollTop >= 0 && scrollTop < pageHeight) {
           //now Page 1
-          console.log('page 1');
           outerRef.current.scroll({
             top: pageHeight,
             left: 0,
@@ -31,7 +30,6 @@ const MainPage = () => {
           setScrollIndex(2);
         } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 2) {
           //now Page 2
-          console.log('page 2');
           outerRef.current.scroll({
             top: pageHeight * 2,
             left: 0,
@@ -40,7 +38,6 @@ const MainPage = () => {
           setScrollIndex(3);
         } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 3) {
           //now Page 3
-          console.log('page 3');
           outerRef.current.scroll({
             top: pageHeight * 3,
             left: 0,
@@ -52,7 +49,6 @@ const MainPage = () => {
         // 스크롤 올리는 경우
         if (scrollTop >= 0 && scrollTop < pageHeight) {
           // now Page 1
-          console.log('page 1');
           outerRef.current.scroll({
             top: 0,
             left: 0,
@@ -61,7 +57,6 @@ const MainPage = () => {
           setScrollIndex(1);
         } else if (scrollTop >= 0 && scrollTop < pageHeight * 2) {
           // now Page 2
-          console.log('page 2');
           outerRef.current.scroll({
             top: 0,
             left: 0,
@@ -70,7 +65,6 @@ const MainPage = () => {
           setScrollIndex(1);
         } else if (scrollTop >= 0 && scrollTop < pageHeight * 3) {
           // now Page 3
-          console.log('page 3');
           outerRef.current.scroll({
             top: pageHeight,
             left: 0,
@@ -79,7 +73,6 @@ const MainPage = () => {
           setScrollIndex(2);
         } else if (scrollTop >= 0 && scrollTop < pageHeight * 4) {
           // now Page 4
-          console.log('page 4');
           outerRef.current.scroll({
             top: pageHeight * 2,
             left: 0,
@@ -118,5 +111,9 @@ const StyledWrapper = styled.div`
 
   &::-webkit-scrollbar {
     display: none;
+  }
+
+  @media (max-width: 1100px) {
+    background-color: blueviolet;
   }
 `;

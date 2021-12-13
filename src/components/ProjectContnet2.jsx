@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 import Brunch from 'assets/brunch.gif';
 import { BsDot, BsLink } from 'react-icons/bs';
+import { StyledContentWrapper, StyledDesc, StyledLink, StyledImgWrapper, StyledTags } from 'components/ProjectContent';
 
 const ProjectContent2 = () => {
   return (
     <StyledContentWrapper>
-      <StyledDesc>
+      <CustomStyledDesc>
         <h2>
-          글이 작품이 되는 공간, <em>Brunch</em> <br />: Re-Design
+          글이 작품이 되는 공간, Brunch <br />: Re-Design
         </h2>
         <ul>
           <li>
@@ -39,7 +40,7 @@ const ProjectContent2 = () => {
             </p>
           </li>
         </ul>
-        <StyledLink>
+        <CustomStyledLink>
           <a href="https://github.com/we-sopt-sibi/client" target="_blank" rel="noopener noreferrer">
             <BsLink /> <span>Github Repository</span>
           </a>
@@ -49,11 +50,11 @@ const ProjectContent2 = () => {
             rel="noopener noreferrer">
             <BsLink /> <span>Brunch 회고록</span>
           </a>
-        </StyledLink>
-      </StyledDesc>
+        </CustomStyledLink>
+      </CustomStyledDesc>
       <StyledImgWrapper>
         <img src={Brunch} alt="" />
-        <StyledTags>
+        <CustomStyledTags>
           <ul>
             <li>SOPT</li>
             <li>합동 세미나</li>
@@ -62,7 +63,7 @@ const ProjectContent2 = () => {
             <li>댓글</li>
             <li>좋아요</li>
           </ul>
-        </StyledTags>
+        </CustomStyledTags>
       </StyledImgWrapper>
     </StyledContentWrapper>
   );
@@ -70,65 +71,20 @@ const ProjectContent2 = () => {
 
 export default ProjectContent2;
 
-const StyledContentWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  width: calc(100% - 29rem);
-  height: 100%;
-  color: white;
-  position: relative;
-`;
-
-const StyledDesc = styled.div`
-  width: 100%;
-  margin-right: 2.3rem;
-  font-size: 1.7rem;
-
-  & > h2 {
-    font-family: 'TmonMonsori';
-    font-size: 3.3rem;
-    margin-bottom: 2rem;
-  }
-
+const CustomStyledDesc = styled(StyledDesc)`
   & > ul {
-    font-weight: bolder;
-
-    & > li:first-child {
-      font-weight: lighter;
-    }
-    & > li + li {
-      margin-top: 2rem;
-    }
-
     & > li {
       & > svg {
         fill: #f8df8b;
-        margin-left: 1rem;
-        font-size: 2rem;
       }
-      & > span {
-        font-weight: normal;
-        font-style: italic;
-      }
-
       & > h2 {
-        font-size: 1.8rem;
         color: #f8df8b;
       }
-
-      & > h3 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-      }
-
       & > p {
-        line-height: 1.8;
-        font-weight: normal;
-
         & > em {
           color: #f8df8b;
+          background-color: transparent;
+          padding: 0;
         }
 
         & > i {
@@ -140,53 +96,18 @@ const StyledDesc = styled.div`
   }
 `;
 
-const StyledImgWrapper = styled.div`
-  margin-right: 3rem;
-  width: 100%;
-
-  & > img {
-    width: 100%;
-  }
-`;
-
-const StyledTags = styled.div`
-  margin-top: 4rem;
-
+const CustomStyledTags = styled(StyledTags)`
   & > ul {
-    display: flex;
-    flex-wrap: wrap;
-
     & > li {
       color: #4a2c2c;
-      font-size: 1.5rem;
       background-color: #f8df8b;
-      padding: 0.3rem 1rem;
-      border-radius: 0.5rem;
-      text-align: center;
-      line-height: 1.6;
-      margin-bottom: 1rem;
-    }
-    & > li + li {
-      margin-left: 1rem;
     }
   }
 `;
 
-const StyledLink = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-top: 1rem;
-
+const CustomStyledLink = styled(StyledLink)`
   & > a {
     background-color: #f8df8b;
-    padding: 0.6rem 1rem;
-    width: 100%;
-    margin-right: 1rem;
-    text-decoration: none;
-    text-align: center;
     color: #4a2c2c;
-    font-weight: bolder;
   }
 `;

@@ -91,7 +91,7 @@ const ProjectContent = () => {
 
 export default ProjectContent;
 
-const StyledContentWrapper = styled.div`
+export const StyledContentWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,7 +102,7 @@ const StyledContentWrapper = styled.div`
   position: relative;
 `;
 
-const StyledDesc = styled.div`
+export const StyledDesc = styled.div`
   width: 100%;
   margin-right: 2.3rem;
   font-size: 1.7rem;
@@ -161,7 +161,7 @@ const StyledDesc = styled.div`
   }
 `;
 
-const StyledImgWrapper = styled.div`
+export const StyledImgWrapper = styled.div`
   margin-right: 2rem;
   width: 100%;
   & > img {
@@ -169,7 +169,7 @@ const StyledImgWrapper = styled.div`
   }
 `;
 
-const StyledTags = styled.div`
+export const StyledTags = styled.div`
   margin-top: 4rem;
 
   & > ul {
@@ -192,7 +192,7 @@ const StyledTags = styled.div`
   }
 `;
 
-const StyledLink = styled.div`
+export const StyledLink = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;

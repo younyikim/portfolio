@@ -70,6 +70,10 @@ const StyledWrapper = styled.section`
   & > svg {
     color: white;
   }
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    flex-direction: column;
+  }
 `;
 
 const StyledDesc = styled.div`
@@ -137,6 +141,16 @@ const StyledDesc = styled.div`
     fill: #f8df8b;
     opacity: 0.5;
   }
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    top: -35rem;
+    left: 0.3rem;
+    font-size: 5rem;
+
+    & > span {
+      font-size: 2rem;
+    }
+  }
 `;
 
 const StyledImgContainer = styled.div`
@@ -152,6 +166,19 @@ const StyledImgContainer = styled.div`
     left: -1rem;
     width: 100%;
     z-index: 2;
+  }
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    top: 32rem;
+    width: 100%;
+    height: 50%;
+
+    & > img {
+      position: absolute;
+      top: -9rem;
+      left: -1rem;
+      width: 100%;
+    }
   }
 `;
 
@@ -173,5 +200,9 @@ const StyledRightNav = styled.div`
     & > svg:hover {
       fill: #f8df8b;
     }
+  }
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    display: none;
   }
 `;

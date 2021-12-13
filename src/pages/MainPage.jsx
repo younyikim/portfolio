@@ -112,8 +112,4 @@ const StyledWrapper = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
-
-  @media (max-width: 1100px) {
-    background-color: blueviolet;
-  }
 `;

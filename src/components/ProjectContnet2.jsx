@@ -94,6 +94,23 @@ const CustomStyledDesc = styled(StyledDesc)`
       }
     }
   }
+  @media (min-width: 320px) and (max-width: 480px) {
+    & > ul {
+      & > li {
+        & > h2 {
+          color: #f8df8b;
+        }
+        & > p {
+          font-size: 1.4rem !important;
+          line-height: 1.8 !important;
+
+          & > i {
+            padding: 0.2rem 0.5rem;
+          }
+        }
+      }
+    }
+  }
 `;
 
 const CustomStyledTags = styled(StyledTags)`

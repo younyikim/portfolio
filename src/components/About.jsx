@@ -86,6 +86,10 @@ const StyledWrapper = styled.section`
   justify-content: center;
   width: 100%;
   height: 100vh;
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    flex-direction: column;
+  }
 `;
 
 const StyledLeft = styled.div`
@@ -107,6 +111,18 @@ const StyledLeft = styled.div`
       width: 9rem;
       height: 9rem;
       margin-right: 2rem;
+    }
+  }
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    margin-top: 3.9rem;
+    margin-left: 1rem;
+    & > div {
+      padding-bottom: 0.4rem;
+      & > svg {
+        width: 4rem;
+        height: 4rem;
+      }
     }
   }
 `;
@@ -152,6 +168,30 @@ const StyledContent = styled.article`
       & > em {
         color: #f8df8b;
       }
+    }
+  }
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.6;
+
+    & > h2 {
+      font-size: 2rem;
+    }
+
+    & > h3 {
+      font-size: 1.7rem;
+    }
+
+    & > img {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    & > div {
+      font-size: 1.4rem;
+      width: calc(100% - 4rem);
     }
   }
 `;

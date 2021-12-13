@@ -7,6 +7,7 @@ import '../styles/slick.css';
 import ProjectContent from './ProjectContent';
 import ProjectContent2 from './ProjectContnet2';
 import ProjectContent3 from './ProjectContent3';
+import Nav from './Nav';
 
 const Projects = () => {
   const settings = {
@@ -19,7 +20,6 @@ const Projects = () => {
   return (
     <StyledProjectWrapper>
       <Fade bottom>
-        {/* <h1>Projects</h1> */}
         <Slider {...settings}>
           <StyledContentFirst>
             <ProjectContent />
@@ -43,16 +43,7 @@ const StyledProjectWrapper = styled.div`
   width: 100%;
   font-size: 3rem;
   position: relative;
-
-  & > h1 {
-    font-family: 'TmonMonsori';
-    position: absolute;
-    top: 10rem;
-    left: 14rem;
-    color: white;
-    z-index: 10;
-    font-weight: bolder;
-  }
+  z-index: 2;
 `;
 const StyledContentFirst = styled.div`
   width: 100%;

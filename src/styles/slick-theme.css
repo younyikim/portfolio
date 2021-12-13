@@ -168,3 +168,25 @@
   opacity: 0.75;
   color: white;
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .slick-prev,
+  .slick-next {
+    width: 0px;
+    height: 0px;
+  }
+
+  .slick-prev:before {
+    content: '';
+  }
+  [dir='rtl'] .slick-prev:before {
+    content: '';
+  }
+
+  .slick-next:before {
+    content: '';
+  }
+  [dir='rtl'] .slick-next:before {
+    content: '';
+  }
+}

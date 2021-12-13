@@ -23,7 +23,6 @@ export default Progress;
 const StyledProgressWrapper = styled.div`
   width: 50rem;
   height: 4rem;
-
   border-radius: 1rem;
   position: relative;
   overflow: hidden;
@@ -35,6 +34,16 @@ const StyledProgressWrapper = styled.div`
     top: 1rem;
     right: 1rem;
     color: white;
+  }
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    width: 28rem;
+    height: 2.9rem;
+    & > span {
+      font-size: 1.7rem;
+      font-weight: bolder;
+      right: 0.4rem;
+    }
   }
 `;
 
@@ -73,5 +82,10 @@ const StyledLiquid = styled.div`
     from {
       transform: rotate(360deg);
     }
+  }
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    width: 0rem;
+    height: 0rem;
   }
 `;

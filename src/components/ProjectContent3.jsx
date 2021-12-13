@@ -1,8 +1,5 @@
 import styled from 'styled-components';
-import Anime from 'assets/anime.png';
 import Brunch from 'assets/brunch.png';
-import { BsDot } from 'react-icons/bs';
-import { SiNotion } from 'react-icons/si';
 
 const ProjectContent3 = () => {
   return (
@@ -105,6 +102,12 @@ const StyledContentWrapper = styled.div`
   color: white;
   position: relative;
   padding-top: 12rem;
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    flex-direction: column;
+    margin: 0 auto;
+    width: calc(100% - 3rem);
+  }
 `;
 
 const StyledDesc = styled.div`
@@ -126,11 +129,6 @@ const StyledDesc = styled.div`
     }
 
     & > li {
-      & > svg {
-        fill: #f8df8b;
-        margin-left: 1rem;
-        font-size: 2rem;
-      }
       & > span {
         cursor: pointer;
         font-weight: bolder;
@@ -168,10 +166,46 @@ const StyledDesc = styled.div`
           }
         }
       }
+    }
+  }
 
-      & > img {
-        width: 100%;
-        height: 12.5rem;
+  @media (min-width: 320px) and (max-width: 480px) {
+    margin-right: 2.3rem;
+    margin-bottom: 10rem;
+    font-size: 1.5rem;
+    height: 100%;
+
+    & > h1 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    & > ul {
+      & > li + li {
+        margin-top: 1rem;
+      }
+
+      & > li {
+        & > h2 {
+          font-size: 1.8rem;
+        }
+
+        & > div {
+          & > h3 {
+            font-size: 2rem;
+            margin-bottom: 0.3rem;
+            padding: 0.8rem 1rem;
+          }
+
+          & > p {
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+
+            & > em {
+              padding: 0.5rem 0.8rem;
+            }
+          }
+        }
       }
     }
   }
@@ -193,6 +227,10 @@ const StyledDescPost = styled.div`
   & > p {
     line-height: 1.8;
     margin: 3rem 0;
+  }
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    display: none;
   }
 `;
 

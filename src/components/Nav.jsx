@@ -36,6 +36,7 @@ const StyledWrapper = styled.nav`
   top: 50%;
   right: -16rem;
   color: white;
+  z-index: 3;
 
   & > ul {
     display: flex;
@@ -55,6 +56,21 @@ const StyledWrapper = styled.nav`
 
     & > li + li {
       margin-left: 5rem;
+    }
+  }
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    position: fixed;
+    top: 2rem;
+    right: 4.3rem;
+    color: white;
+    & > ul {
+      justify-content: center;
+      font-size: 1.5rem;
+      transform: rotate(0deg);
+      & > li + li {
+        margin-left: 3rem;
+      }
     }
   }
 `;

@@ -100,6 +100,11 @@ export const StyledContentWrapper = styled.div`
   height: 100%;
   color: white;
   position: relative;
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    flex-direction: column;
+    width: calc(100% - 4rem);
+  }
 `;
 
 export const StyledDesc = styled.div`
@@ -159,13 +164,60 @@ export const StyledDesc = styled.div`
       }
     }
   }
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    position: absolute;
+    top: 24rem;
+    left: 0;
+    font-size: 1.4rem;
+
+    & > h2 {
+      font-size: 2.2rem;
+    }
+
+    & > ul {
+      & > li {
+        & > svg {
+          margin-left: 0;
+          font-size: 1.4rem;
+        }
+        & > span {
+          font-size: 1.2rem;
+        }
+
+        & > h2 {
+          font-size: 1.5rem;
+        }
+
+        & > h3 {
+          font-size: 1.8rem;
+          margin-bottom: 0.5rem;
+        }
+
+        & > p {
+          line-height: 1.3;
+
+          & > em {
+            padding: 0.2rem 0.5rem;
+          }
+        }
+      }
+    }
+  }
 `;
 
 export const StyledImgWrapper = styled.div`
   margin-right: 2rem;
   width: 100%;
+
   & > img {
     width: 100%;
+  }
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    position: absolute;
+    top: 4rem;
+    left: 0;
   }
 `;
 
@@ -190,6 +242,13 @@ export const StyledTags = styled.div`
       margin-left: 1rem;
     }
   }
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    margin-top: 0;
+    & > ul {
+      display: none;
+    }
+  }
 `;
 
 export const StyledLink = styled.div`
@@ -208,5 +267,9 @@ export const StyledLink = styled.div`
     text-align: center;
     color: white;
     font-weight: bolder;
+  }
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    display: none;
   }
 `;

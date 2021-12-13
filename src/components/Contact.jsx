@@ -66,6 +66,13 @@ const StyledContactWrapper = styled.div`
   width: 100%;
   height: 100vh;
   position: relative;
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 const StyledLeft = styled.div`
@@ -84,6 +91,19 @@ const StyledLeft = styled.div`
     left: 3rem;
     z-index: 1;
   }
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    top: 60rem;
+    left: 0;
+    height: 120%;
+    background-color: #f8df8b;
+
+    & > img {
+      width: 150%;
+      bottom: 18rem;
+      left: -13rem;
+    }
+  }
 `;
 
 const StyledRight = styled.div`
@@ -91,6 +111,10 @@ const StyledRight = styled.div`
   height: 100vh;
   position: relative;
   line-height: 1.8;
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    width: calc(100% - 5rem);
+  }
 `;
 
 const StyledContact = styled.div`
@@ -112,6 +136,23 @@ const StyledContact = styled.div`
       font-size: 2.3rem;
       font-weight: 800;
       color: #f8df8b;
+    }
+  }
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    top: -38rem;
+    right: 0;
+
+    & > h1 {
+      font-size: 3.5rem;
+    }
+
+    & > p {
+      font-size: 1.5rem;
+
+      & > em {
+        font-size: 2rem;
+      }
     }
   }
 `;
@@ -137,15 +178,24 @@ const StyledContactInfo = styled.div`
   & > div + div {
     margin-top: 1rem;
   }
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    & > div {
+      & > svg {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
+  }
 `;
 
 const StyledDecoration = styled.div`
   display: flex;
   justify-content: space-around;
   width: 100%;
-  height: 80rem;
+  height: 100%;
   position: absolute;
-  top: 2rem;
+  top: -6rem;
 `;
 
 const Flake = styled.div`
@@ -163,13 +213,13 @@ const Flake = styled.div`
   }
 
   &:nth-child(3n + 1) {
-    animation-duration: 4s;
+    animation-duration: 3s;
     animation-iteration-count: 45;
     transform-origin: right -30px;
   }
 
   &:nth-child(3n + 2) {
-    animation-duration: 6s;
+    animation-duration: 4s;
     animation-iteration-count: 60;
     transform-origin: right -15px;
   }
@@ -208,11 +258,6 @@ const Flake = styled.div`
   &:nth-child(7n + 6) {
     opacity: 0.9;
     animation-delay: 0.8s;
-    animation-timing-function: ease-in;
-  }
-  &:nth-child(7n + 7) {
-    opacity: 1;
-    animation-delay: 1s;
     animation-timing-function: ease-in;
   }
 

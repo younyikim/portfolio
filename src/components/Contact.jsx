@@ -110,6 +110,7 @@ const StyledContact = styled.div`
 
     & > em {
       font-size: 2.3rem;
+      font-weight: 800;
       color: #f8df8b;
     }
   }
@@ -148,14 +149,12 @@ const StyledDecoration = styled.div`
 `;
 
 const Flake = styled.div`
-  width: 3rem;
-  height: 3rem;
   background-color: ${(props) => props.color};
 
   width: 6rem;
   height: 6rem;
   display: inline-block;
-  animation: paperflakes 2s linear 20;
+  animation: paperflakes 2s linear;
 
   &:nth-child(3n) {
     animation-duration: 2s;
@@ -208,9 +207,15 @@ const Flake = styled.div`
   }
   &:nth-child(7n + 6) {
     opacity: 0.9;
+    animation-delay: 0.8s;
+    animation-timing-function: ease-in;
+  }
+  &:nth-child(7n + 7) {
+    opacity: 1;
     animation-delay: 1s;
     animation-timing-function: ease-in;
   }
+
   @keyframes paperflakes {
     0% {
       transform: translate3d(0, 0, 0) rotate(0deg) scale(0.6);

@@ -19,7 +19,7 @@ const Projects = () => {
   return (
     <StyledProjectWrapper>
       <Fade bottom>
-        <h1>Projects</h1>
+        {/* <h1>Projects</h1> */}
         <Slider {...settings}>
           <StyledContentFirst>
             <ProjectContent />

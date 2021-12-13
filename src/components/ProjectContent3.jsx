@@ -8,56 +8,53 @@ const ProjectContent3 = () => {
   return (
     <StyledContentWrapper>
       <StyledDesc>
-        <h2>SOPT Study</h2>
+        <h1>SOPT Study</h1>
         <ul>
           <li>
-            <h3>Web Part</h3>
+            <h2>Web Part</h2>
           </li>
           <li>
             <div>
+              <h3>React Study : 아이리스</h3>
               <p>
-                <BsDot />
-                React Study : 아이리스
+                React 스터디에 참여하며, React의 기초부터 Redux, Webpack 등 심화 내용까지 두루 공부하였으며,{' '}
+                <em>스터디장</em>을 맡아 8주간의 스터디를 성공적으로 이끌었습니다. Notion [웹 파트 스터디]에서 기록들을
+                볼 수 있습니다.
               </p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Animation Study : 아니메</h3>
+              <p>
+                애니메이션 스터디에서, CSS와 자바스크립트 애니메이션에 대해 공부하고, 실제 애니메이션을 구현하는 것 부터
+                다양한 라이브러리를 적용하는 방법까지 폭넓게 공부하였습니다. 이를 바탕으로, 앞서 소개한 COEAT, Brunch
+                Re-Design 프로젝트에서도 <em>다양한 애니메이션을 직접 구현</em>하였습니다. 앱잼에서도 다양하고 멋진
+                애니메이션을 꼭 구현해보고 싶습니다.
+              </p>
+            </div>
+          </li>
+          <li>
+            <h2>Every Part</h2>
+          </li>
+          <li>
+            <div>
+              <h3>Javascript Algorithm Study</h3>
 
-              <StyledLink>
-                <SiNotion /> <span>Notion</span>
-              </StyledLink>
-            </div>
-          </li>
-          <li>
-            <div>
               <p>
-                <BsDot />
-                Animation Study : 아니메
+                자바스크립트 알고리즘 스터디를 통해, 자바스크립트 심화 문법과 문제를 해결하는{' '}
+                <em>효율적인 코드와 자료구조</em>에 대해 공부했습니다.
               </p>
-              <StyledLink>
-                <SiNotion /> <span>Notion</span>
-              </StyledLink>
             </div>
-          </li>
-          <li>
-            <h3>Every Part</h3>
-          </li>
-          <li>
-            <div>
-              <p>
-                <BsDot />
-                Javascript Algorithm Study
-              </p>
-
-              <StyledLink>
-                <SiNotion /> <span>Notion</span>
-              </StyledLink>
-            </div>
-          </li>
-          <li>
-            <img src={Anime} alt="" />
           </li>
         </ul>
       </StyledDesc>
       <StyledDescPost>
         <h2>My Posts</h2>
+        <p>
+          SOPT에서의 기록, 공부 기록들을 천천히, 하지만 꾸준히 기록하려 노력하고 있습니다. Velog 기술 블로그와 개인
+          Notion에 다양한 글들을 기록하고 있습니다.
+        </p>
         <StyledCardWrapper>
           <a
             href="https://velog.io/@younyikim/Error-React%EC%97%90%EC%84%9C-SVG-%ED%8C%8C%EC%9D%BC%EC%9D%B4-%EB%8D%AE%EC%96%B4%EC%94%8C%EC%9B%8C%EC%A7%80%EB%8A%94-%EB%AC%B8%EC%A0%9C"
@@ -107,7 +104,7 @@ const StyledContentWrapper = styled.div`
   height: 100%;
   color: white;
   position: relative;
-  padding-top: 21rem;
+  padding-top: 12rem;
 `;
 
 const StyledDesc = styled.div`
@@ -115,7 +112,7 @@ const StyledDesc = styled.div`
   margin-right: 2.3rem;
   font-size: 1.7rem;
 
-  & > h2 {
+  & > h1 {
     font-family: 'TmonMonsori';
     font-size: 3.3rem;
     margin-bottom: 2rem;
@@ -140,25 +137,35 @@ const StyledDesc = styled.div`
         color: #f8df8b;
       }
 
-      & > h3 {
+      & > h2 {
         font-size: 1.8rem;
         color: #f8df8b;
       }
 
       & > div {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
+
+        & > h3 {
+          font-size: 2rem;
+          margin-bottom: 0.3rem;
+          border: 1px solid #f8df8b;
+          padding: 0.8rem 1rem;
+        }
 
         & > a {
           text-decoration: none;
         }
 
-        & > a:visited {
-          color: white;
-        }
+        & > p {
+          line-height: 1.8;
+          font-weight: normal;
 
-        & > a:link {
-          color: white;
+          & > em {
+            background-color: #ffa60065;
+            padding: 0.5rem 0.8rem;
+          }
         }
       }
 
@@ -167,17 +174,6 @@ const StyledDesc = styled.div`
         height: 12.5rem;
       }
     }
-  }
-`;
-
-const StyledLink = styled.div`
-  display: flex;
-  border: 1px solid white;
-  padding: 0.3rem 1rem 0.1rem 1rem;
-
-  & > span {
-    margin-left: 0.6rem;
-    line-height: 1.3;
   }
 `;
 
@@ -192,6 +188,11 @@ const StyledDescPost = styled.div`
     font-family: 'TmonMonsori';
     font-size: 3.3rem;
     margin-bottom: 2rem;
+  }
+
+  & > p {
+    line-height: 1.8;
+    margin: 3rem 0;
   }
 `;
 

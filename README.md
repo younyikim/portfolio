@@ -19,6 +19,7 @@
 |🎰 MBTI|INTJ|
 |🔥 SOPT|29th YB Web Part|
 |#️⃣ 해시태그|`Web좋아`  `Animation좋아`<br/>  `React좋아` `개발 좋아` `솝트 좋아`|
+|📝 블로그|[`Velog`](https://velog.io/@younyikim)|
 
 
 <hr />

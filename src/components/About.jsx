@@ -117,8 +117,10 @@ const StyledLeft = styled.div`
   @media (min-width: 320px) and (max-width: 480px) {
     margin-top: 3.9rem;
     margin-left: 1rem;
+
     & > div {
       padding-bottom: 0.4rem;
+
       & > svg {
         width: 4rem;
         height: 4rem;
@@ -185,8 +187,10 @@ const StyledContent = styled.article`
     }
 
     & > img {
-      width: 3rem;
-      height: 3rem;
+      width: 4rem;
+      height: 4rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
     }
 
     & > div {

@@ -46,7 +46,6 @@ const Contact = () => {
               <BsInstagram />
               <span>yenoexiste</span>
             </div>
-
             <div>
               <VscGithubAlt />
               <span>younyikim</span>
@@ -72,6 +71,7 @@ const StyledContactWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow-y: hidden;
   }
 `;
 
@@ -108,7 +108,7 @@ const StyledLeft = styled.div`
 
 const StyledRight = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: relative;
   line-height: 1.8;
 
@@ -196,6 +196,11 @@ const StyledDecoration = styled.div`
   height: 100%;
   position: absolute;
   top: -6rem;
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 const Flake = styled.div`
@@ -268,5 +273,8 @@ const Flake = styled.div`
     100% {
       transform: translate3d(15px, 1200px, 0px) rotate(180deg) scale(0.6);
     }
+  }
+
+  @media (min-width: 320px) and (max-width: 480px) {
   }
 `;

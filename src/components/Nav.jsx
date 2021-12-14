@@ -62,7 +62,7 @@ const StyledWrapper = styled.nav`
   @media (min-width: 320px) and (max-width: 480px) {
     position: fixed;
     top: 2rem;
-    right: 4.3rem;
+    right: 5rem;
     color: white;
     & > ul {
       justify-content: center;

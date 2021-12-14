@@ -84,8 +84,10 @@ const MainPage = () => {
     };
     const outerRefCurrent = outerRef.current;
     outerRefCurrent.addEventListener('wheel', wheelHandler);
+    outerRefCurrent.addEventListener('touchmove', wheelHandler);
     return () => {
       outerRefCurrent.removeEventListener('wheel', wheelHandler);
+      outerRefCurrent.removeEventListener('touchmove', wheelHandler);
     };
   }, []);
 

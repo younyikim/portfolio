@@ -93,7 +93,20 @@ const StyledLeft = styled.div`
     z-index: 1;
   }
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 370px) {
+    top: 50rem;
+    left: 0;
+    height: 100%;
+    background-color: #f8df8b;
+
+    & > img {
+      width: 120%;
+      bottom: 18rem;
+      left: -13rem;
+    }
+  }
+
+  @media (min-width: 370px) and (max-width: 480px) {
     top: 60rem;
     left: 0;
     height: 120%;
@@ -141,7 +154,7 @@ const StyledContact = styled.div`
   }
 
   @media (min-width: 320px) and (max-width: 370px) {
-    top: -28rem;
+    top: -27.5rem;
     right: 0;
 
     & > h1 {

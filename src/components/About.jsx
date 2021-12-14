@@ -87,7 +87,12 @@ const StyledWrapper = styled.section`
   width: 100%;
   height: 100vh;
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 370px) {
+    flex-direction: column;
+    height: 150%;
+  }
+
+  @media (min-width: 370px) and (max-width: 480px) {
     flex-direction: column;
   }
 `;
@@ -204,15 +209,16 @@ const StyledContent = styled.article`
     & > img {
       width: 3rem;
       height: 3rem;
-      margin-top: 1rem;
+      margin-top: 3rem;
       margin-bottom: 1rem;
     }
 
     & > div {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       width: calc(100% - 3rem);
     }
   }
+
   @media (min-width: 380px) and (max-width: 480px) {
     text-align: center;
     font-size: 1rem;

@@ -73,6 +73,7 @@ const StyledWrapper = styled.section`
 
   @media (min-width: 320px) and (max-width: 480px) {
     flex-direction: column;
+    overflow-y: hidden;
   }
 `;
 
@@ -145,10 +146,10 @@ const StyledDesc = styled.div`
   @media (min-width: 320px) and (max-width: 370px) {
     top: -25rem;
     left: 0.3rem;
-    font-size: 5rem;
+    font-size: 3.8rem;
 
     & > span {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
   }
 
@@ -185,12 +186,13 @@ const StyledImgContainer = styled.div`
 
     & > img {
       position: absolute;
-      top: -9rem;
+      top: -12rem;
       left: -1rem;
       width: 100%;
       overflow-y: hidden;
     }
   }
+
   @media (min-width: 370px) and (max-width: 480px) {
     top: 28rem;
     width: 100%;

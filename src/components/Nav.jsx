@@ -60,14 +60,20 @@ const StyledWrapper = styled.nav`
   }
 
   @media (min-width: 320px) and (max-width: 480px) {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
     position: fixed;
     top: 2rem;
-    right: 5rem;
+    right: 0;
     color: white;
+
     & > ul {
       justify-content: center;
       font-size: 1.5rem;
       transform: rotate(0deg);
+
       & > li + li {
         margin-left: 3rem;
       }

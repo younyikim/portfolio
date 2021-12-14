@@ -100,7 +100,7 @@ const StyledMobile = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100%;
+  height: 90%;
   color: white;
   font-size: 1.7rem;
   line-height: 1.8;

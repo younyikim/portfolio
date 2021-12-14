@@ -84,7 +84,6 @@ const MainPage = () => {
     };
     const outerRefCurrent = outerRef.current;
     outerRefCurrent.addEventListener('wheel', wheelHandler);
-
     return () => {
       outerRefCurrent.removeEventListener('wheel', wheelHandler);
     };
@@ -106,7 +105,7 @@ export default MainPage;
 const StyledWrapper = styled.div`
   width: 100%;
   height: 100vh;
-  background-color: #090910;
+  background-color: black;
   overflow-y: scroll;
   z-index: 2;
 

@@ -194,4 +194,8 @@ const StyledWrapper = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    overflow-x: hidden;
+  }
 `;

@@ -35,12 +35,23 @@ const StyledProgressWrapper = styled.div`
     right: 1rem;
     color: white;
   }
+  @media (min-width: 320px) and (max-width: 380px) {
+    width: 25rem;
+    height: 2rem;
 
-  @media (min-width: 320px) and (max-width: 480px) {
-    width: 28rem;
-    height: 2.9rem;
     & > span {
-      font-size: 1.7rem;
+      font-size: 1.3rem;
+      font-weight: bolder;
+      right: 0.4rem;
+    }
+  }
+
+  @media (min-width: 380px) and (max-width: 480px) {
+    width: 28rem;
+    height: 2.3rem;
+
+    & > span {
+      font-size: 1.5rem;
       font-weight: bolder;
       right: 0.4rem;
     }

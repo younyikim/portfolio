@@ -114,7 +114,7 @@ const StyledLeft = styled.div`
     }
   }
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 370px) {
     margin-top: 3.9rem;
     margin-left: 1rem;
 
@@ -122,8 +122,22 @@ const StyledLeft = styled.div`
       padding-bottom: 0.4rem;
 
       & > svg {
-        width: 4rem;
-        height: 4rem;
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+  }
+
+  @media (min-width: 370px) and (max-width: 480px) {
+    margin-top: 3.9rem;
+    margin-left: 1rem;
+
+    & > div {
+      padding-bottom: 0.4rem;
+
+      & > svg {
+        width: 3.5rem;
+        height: 3.5rem;
       }
     }
   }
@@ -173,10 +187,37 @@ const StyledContent = styled.article`
     }
   }
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 380px) {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.4;
+    z-index: 3;
+
+    & > h2 {
+      font-size: 1.5rem;
+    }
+
+    & > h3 {
+      font-size: 1.3rem;
+    }
+
+    & > img {
+      width: 3rem;
+      height: 3rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    & > div {
+      font-size: 1.5rem;
+      width: calc(100% - 3rem);
+    }
+  }
+  @media (min-width: 380px) and (max-width: 480px) {
     text-align: center;
     font-size: 1rem;
     line-height: 1.6;
+    z-index: 3;
 
     & > h2 {
       font-size: 2rem;

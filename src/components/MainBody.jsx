@@ -142,8 +142,18 @@ const StyledDesc = styled.div`
     opacity: 0.5;
   }
 
-  @media (min-width: 320px) and (max-width: 480px) {
-    top: -35rem;
+  @media (min-width: 320px) and (max-width: 370px) {
+    top: -25rem;
+    left: 0.3rem;
+    font-size: 5rem;
+
+    & > span {
+      font-size: 2rem;
+    }
+  }
+
+  @media (min-width: 370px) and (max-width: 480px) {
+    top: -31.5rem;
     left: 0.3rem;
     font-size: 5rem;
 
@@ -168,8 +178,8 @@ const StyledImgContainer = styled.div`
     z-index: 2;
   }
 
-  @media (min-width: 320px) and (max-width: 480px) {
-    top: 32rem;
+  @media (min-width: 320px) and (max-width: 370px) {
+    top: 27rem;
     width: 100%;
     height: 50%;
 
@@ -178,6 +188,20 @@ const StyledImgContainer = styled.div`
       top: -9rem;
       left: -1rem;
       width: 100%;
+      overflow-y: hidden;
+    }
+  }
+  @media (min-width: 370px) and (max-width: 480px) {
+    top: 28rem;
+    width: 100%;
+    height: 50%;
+
+    & > img {
+      position: absolute;
+      top: -9rem;
+      left: -1rem;
+      width: 100%;
+      overflow-y: hidden;
     }
   }
 `;

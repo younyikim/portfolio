@@ -65,6 +65,7 @@ const StyledContactWrapper = styled.div`
   width: 100%;
   height: 100vh;
   position: relative;
+  background-color: black;
 
   @media (min-width: 320px) and (max-width: 480px) {
     display: flex;
@@ -139,7 +140,23 @@ const StyledContact = styled.div`
     }
   }
 
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (min-width: 320px) and (max-width: 370px) {
+    top: -28rem;
+    right: 0;
+
+    & > h1 {
+      font-size: 3.5rem;
+    }
+
+    & > p {
+      font-size: 1.4rem;
+
+      & > em {
+        font-size: 1.7rem;
+      }
+    }
+  }
+  @media (min-width: 370px) and (max-width: 480px) {
     top: -38rem;
     right: 0;
 
@@ -184,6 +201,10 @@ const StyledContactInfo = styled.div`
       & > svg {
         width: 2.5rem;
         height: 2.5rem;
+      }
+
+      & > span {
+        font-size: 1.5rem;
       }
     }
   }

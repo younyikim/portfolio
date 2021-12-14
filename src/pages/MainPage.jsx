@@ -159,7 +159,7 @@ const MainPage = () => {
     outerRefCurrent.addEventListener('touchstart', (e) => {
       start = e.changedTouches[0];
     });
-    // outerRefCurrent.addEventListener('touchmove', touchHandler);
+    outerRefCurrent.addEventListener('touchmove', touchHandler);
     outerRefCurrent.addEventListener('touchend', touchHandler);
     return () => {
       outerRefCurrent.removeEventListener('wheel', wheelHandler);

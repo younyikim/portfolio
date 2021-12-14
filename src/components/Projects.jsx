@@ -53,7 +53,9 @@ const Projects = () => {
         <StyledMobile>
           <img src={bearImg} alt="" />
           <p>앗, 화면이 너무 작아요!</p>
-          <p>프로젝트에 대한 자세한 내용은</p>
+          <p>
+            <em>프로젝트</em>에 대한 자세한 내용은
+          </p>
           <p>컴퓨터에서 확인해주세요!</p>
           <p>감사합니다. </p>
         </StyledMobile>
@@ -104,6 +106,12 @@ const StyledMobile = styled.div`
   line-height: 1.8;
   z-index: 2;
   background-color: black;
+
+  & > p {
+    & > em {
+      color: #f8df8b;
+    }
+  }
 
   & > img {
     margin-bottom: 1rem;

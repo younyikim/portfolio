@@ -87,4 +87,8 @@ const Dot = styled.div`
       return 'white';
     }
   }};
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    color: white;
+  }
 `;

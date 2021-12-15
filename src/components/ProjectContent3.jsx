@@ -79,7 +79,7 @@ const ProjectContent3 = () => {
                 <img src={Site} alt="" />
               </CardImgWrapper>
               <div>
-                <h3> 나만의 포트폴리오 사이트 만들기 </h3>
+                <h3> 나만의 포트폴리오 사이트 제작기 </h3>
                 <p>2021년 12월 14일</p>
               </div>
             </StyledCard>

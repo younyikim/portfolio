@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Site from 'assets/site.png';
+import Site from 'assets/site.jpeg';
 
 const ProjectContent3 = () => {
   return (

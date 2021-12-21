@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.fa875c53.chunk.css",
-    "main.js": "/portfolio/static/js/main.8be2da0b.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.8be2da0b.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.ceb1f33b.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.ceb1f33b.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.d8141bc8.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.d8141bc8.js.map",
     "static/js/2.08af7bbd.chunk.js": "/portfolio/static/js/2.08af7bbd.chunk.js",
@@ -12,7 +12,7 @@
     "static/js/2.08af7bbd.chunk.js.LICENSE.txt": "/portfolio/static/js/2.08af7bbd.chunk.js.LICENSE.txt",
     "static/media/bear.16e819e7.png": "/portfolio/static/media/bear.16e819e7.png",
     "static/media/brunch.1871606f.gif": "/portfolio/static/media/brunch.1871606f.gif",
-    "static/media/contact.2be0c86a.png": "/portfolio/static/media/contact.2be0c86a.png",
+    "static/media/contact.5095b1e3.png": "/portfolio/static/media/contact.5095b1e3.png",
     "static/media/css.6b6f52e7.svg": "/portfolio/static/media/css.6b6f52e7.svg",
     "static/media/final.96fcccd9.gif": "/portfolio/static/media/final.96fcccd9.gif",
     "static/media/git.2231ab47.svg": "/portfolio/static/media/git.2231ab47.svg",
@@ -27,6 +27,6 @@
     "static/js/runtime-main.d8141bc8.js",
     "static/js/2.08af7bbd.chunk.js",
     "static/css/main.fa875c53.chunk.css",
-    "static/js/main.8be2da0b.chunk.js"
+    "static/js/main.ceb1f33b.chunk.js"
   ]
 }
